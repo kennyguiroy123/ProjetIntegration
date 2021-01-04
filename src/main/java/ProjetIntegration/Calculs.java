@@ -15,11 +15,7 @@ public class Calculs
         {
                 return operande1 * operande2;
         }
-        
-        public int additionnertest()
-        {
-                return operande1 + operande2 + operande1;
-        }        
+             
         
         public int additionner()
         {
