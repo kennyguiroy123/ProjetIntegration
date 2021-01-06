@@ -14,8 +14,7 @@ public class Calculs
         public int multiplier()
         {
                 return operande1 * operande2;
-        }
-             
+        }  
         
         public int additionner()
         {

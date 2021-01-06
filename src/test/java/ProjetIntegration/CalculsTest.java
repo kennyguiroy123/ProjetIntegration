@@ -1,29 +1,28 @@
 package ProjetIntegration;
 
 import static org.junit.Assert.assertEquals;
-
-import java.util.stream.Stream;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-@RunWith(Parameterized.class)
+//@RunWith(Parameterized.class)
 public class CalculsTest {
-	@BeforeEach
+	
+	//@BeforeEach
     void setUp() throws Exception 
 	{
-            // Instanciations communes à tous les tests, initalisations         
+		assertTrue( true );// Instanciations communes à tous les tests, initalisations         
     }        
 
     @AfterEach
     void tearDown() throws Exception 
 	{
-           // Eventuel nettoyage/réinitialisation après chaque test
+    	assertTrue( true );  // Eventuel nettoyage/réinitialisation après chaque test
 
     }
 
@@ -46,4 +45,5 @@ public class CalculsTest {
             Calculs monCal = new Calculs(firstNumber, secondNumber);
             assertEquals(expectedResult, monCal.multiplier());
     }
+
 }
