@@ -19,11 +19,5 @@ pipeline {
       }
     }
 
-    stage('Rapport jacoco') {
-      steps {
-        publishCoverage()
-      }
-    }
-
   }
 }
