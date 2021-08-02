@@ -1,9 +1,27 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Snapshot') {
       steps {
-        echo 'Bonjour'
+        mavenSnapshotCheck(check: true)
+      }
+    }
+
+    stage('Jacoco') {
+      steps {
+        jacoco(maximumBranchCoverage: '100', maximumClassCoverage: '100', maximumLineCoverage: '100', maximumMethodCoverage: '100', minimumBranchCoverage: '20', minimumClassCoverage: '20', minimumLineCoverage: '20', minimumMethodCoverage: '20')
+      }
+    }
+
+    stage('Message') {
+      steps {
+        echo 'Pipeline Fonctionne correctement'
+      }
+    }
+
+    stage('Rapport jacoco') {
+      steps {
+        publishCoverage()
       }
     }
 
