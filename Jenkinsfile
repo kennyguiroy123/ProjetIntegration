@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Snapshot') {
       steps {
-        mavenSnapshotCheck(check: true)
+        mavenSnapshotCheck()
       }
     }
 
