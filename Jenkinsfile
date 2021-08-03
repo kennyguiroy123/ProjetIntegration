@@ -13,9 +13,15 @@ pipeline {
       }
     }
 
+    stage('Junit') {
+      steps {
+        junit(allowEmptyResults: true, testResults: 'tests')
+      }
+    }
+
     stage('Message') {
       steps {
-        echo 'Maven,Jacoco Fonctionnel'
+        echo 'Maven,jacoco et Junit fonctionnel'
       }
     }
 
