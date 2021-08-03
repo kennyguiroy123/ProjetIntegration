@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Snapshot') {
+    stage('Maven') {
       steps {
         mavenSnapshotCheck()
       }
