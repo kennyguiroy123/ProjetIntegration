@@ -13,15 +13,9 @@ pipeline {
       }
     }
 
-    stage('Tests') {
-      steps {
-        junit '**/target/surefire-reports/*.xml'
-      }
-    }
-
     stage('Message') {
       steps {
-        echo 'Maven,Jacoco et Junit Fonctionnel'
+        echo 'Maven,Jacoco Fonctionnel'
       }
     }
 
