@@ -13,9 +13,15 @@ pipeline {
       }
     }
 
+    stage('Tests') {
+      steps {
+        junit '1'
+      }
+    }
+
     stage('Message') {
       steps {
-        echo 'Pipeline Fonctionne correctement'
+        echo 'Maven,Jacoco et Junit Fonctionnel'
       }
     }
 
