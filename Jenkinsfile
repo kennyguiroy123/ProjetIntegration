@@ -15,7 +15,7 @@ pipeline {
 
     stage('Tests') {
       steps {
-        junit '1'
+        junit 'testResults'
       }
     }
 
